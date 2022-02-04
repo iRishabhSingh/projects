@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+#analog {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#analogComponents {
+    margin: 10px;
+}
+#analogClock {
+    width: 75vmin;
+    height: 75vmin;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 450px;
+    max-height: 450px;
+    background-size: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    align-items: center;
+    box-shadow: 0 0 0 .4vw #ffffffdd, 
+                inset 0 0 2vw 1vw #3b73ac;
+}
+#hour, #minute, #second {
+    position: absolute;
+    bottom: 50%;
+    border-radius: 20vw;
+    background-color: #333;
+    transform-origin: bottom;
+}
+#hour {
+    width: 1.5%;
+    height: 28%;
+    left: 49.16%;
+    background-color: #ffffff4d;
+    z-index: 3;
+}
+#minute {
+    width: 0.9%;
+    height: 32%;
+    left: 49.5%;
+    background-color: #ffffff80;
+    z-index: 2;
+}
+#second {
+    width: 1px;
+    height: 35%;
+    left: 49.85%;
+    background-color: white;
+    z-index: 1;
+}
+#centerOfAnalog {
+    width: 4%;
+    height: 4%;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 4;
+}
+
+// Media Query for Analog Clock
+@media (max-height: 700px) {
+    #analogClock {
+        width: 65vmin !important;
+        height: 65vmin !important;
+    }
+}

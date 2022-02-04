@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">    <!-- HTML tag with language selected as ENGLISH -->
+
+<!-- Head Tag -->
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Discription of WebApp on Searching it on Search Engin -->
+    <meta name="discription" content="Digital and Analog Clock with JavaScript | JavaScript is Powerful! See how implementing JavaScript changed the look of my WebApp as a begginer.">
+    
+    <!-- Linking CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Web App Icon -->
+    <!-- <link rel="shortcut icon" href="./icon/icon.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="./icon/clock-regular.svg" type="image/x-icon">
+
+    <!-- TITLE of the Page -->
+    <title>Web Clock App</title>
+</head>
+<!-- Body Tag -->
+<body>
+
+    <!-- Header Div containing Navigation Pannel -->
+    <header class="header">
+
+        <!-- Only Nav Bar of this Page -->
+        <nav class="nav">
+            
+            <!-- List of NavBar Options -->
+            <ul class="nav-list flex">
+                
+                <!-- Back Button to return to the PROJECT PAGE -->
+                <span id="backBtn"><a href="/"><?xml version="1.0" encoding="UTF-8"?>
+                    <svg xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24"><path d="M24,12A12,12,0,1,0,12,24,12.013,12.013,0,0,0,24,12ZM2,12A10,10,0,1,1,12,22,10.011,10.011,0,0,1,2,12Z"/><path d="M8,12a2.993,2.993,0,0,1,.752-1.987c.291-.327.574-.637.777-.84L12.353,6.3a1,1,0,0,1,1.426,1.4L10.95,10.58c-.187.188-.441.468-.7.759a1,1,0,0,0,0,1.323c.258.29.512.57.693.752L13.779,16.3a1,1,0,0,1-1.426,1.4L9.524,14.822c-.2-.2-.48-.507-.769-.833A2.99,2.99,0,0,1,8,12Z"/></svg></a></span>
+                
+                <!-- List Item 1 || ANALOG CLOCK || -->
+                <li class="nav-items" >
+                    <span onclick="activeNav(`navLink-Analog`)" class="nav-link selected-nav-option" id="navLink-Analog">Analog</span>
+                </li>
+                
+                <!-- List Item 2 || DIGITAL CLOCK || -->
+                <li class="nav-items" >
+                    <span onclick="activeNav(`navLink-Digital`)" class="nav-link" id="navLink-Digital">Digital</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Clock section Digital and Analog -->
+    <main class="container">
+
+        <!-- Main Body |ANALOG CLOCK| -->
+        <div class="analog innerContainer" id="analog">
+
+            <!-- Toggle Button to toggle between BG and No BG of Analog Clock -->
+            <label for="AnalogBG">Background: <input onclick="analogBackground()" type="checkbox" name="analogBG" class="toggleSwitch" id="analogBG"></label>
+            
+            <!-- Div containg ANALOG CLOCK -->
+            <div class="analogComponents" id="analogComponents">
+
+                <div class="analogClock" id="analogClock">
+
+                    <!-- Analog Clock -->
+                    <div id="hour"></div>
+                    <div id="minute"></div>
+                    <div id="second"></div>
+                    <div id="centerOfAnalog"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Body |DIGITAL CLOCK| -->
+        <div class="digital innerContainer" id="digital" style="display: none;">
+
+            <!-- Toggle Button to toggle between BG and No BG of Analog Clock -->
+            <label for="hourFormat">24-hour format: <input onclick="twentyfourHrFormat()" type="checkbox" name="analogBG" class="toggleSwitch" id="hourFormat"></label>
+            
+            <!-- Digital Clock -->
+            <div class="digitalComponents" id="digitalComponents">
+
+                <div class="digitalClock" id="digitalClock">
+
+                    <!-- Digital Clock -->
+                    <div id="dtime">
+                        <span id="hd">00</span>:<span id="md">00</span><span id="hdblink">:</span><span id="sd">00</span><span id="ampm">AM</span>
+                    </div>
+                    <div id="dday">
+                        <span id="wdate">MON</span> <span id="ddate">01</span> <span id="mdate">JAN</span> <span id="ydate">1960</span>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </main>
+
+    <!-- Footer Div containg Project Details -->
+    <footer class="footer">
+        <div class="footerDetails">
+            <span>JavaScript Project <strong>Number #1</strong></span>
+            <p>
+                Copyright © 2022 &nbsp; ◂|▸<a href="https://irishabhsingh.github.io" target="_blank">iRishabhSingh.com</a>
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Script Used in the Project -->
+    <script src="./js/navBar.js"></script>
+    <script src="./js/analog.js"></script>
+    <script src="./js/digital.js"></script>
+</body>
+</html>

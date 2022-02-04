@@ -1,0 +1,17 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'system-ui';
+    background: #0f1f2a;
+    color: whitesmoke;
+}
+
+@import './const';
+@import './nav';
+@import './main';
+@import './analog';
+@import './digital';
+@import './footer';

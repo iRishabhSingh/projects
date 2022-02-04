@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'system-ui';
+  background: #0f1f2a;
+  color: whitesmoke;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+/* Input Element of type Checkbox 
+applying CSS to make it look like toggle button
+on adding | .toggleSwitch | class */
+.toggleSwitch {
+  position: relative;
+  cursor: pointer;
+  width: 35px;
+  height: 20px;
+  -webkit-appearance: none;
+  background-color: #1a6ea770;
+  outline-style: none;
+  outline-color: transparent;
+  margin-left: 5px;
+  border-radius: 35px;
+  -webkit-box-shadow: inset 0 0 5px #00000020;
+          box-shadow: inset 0 0 5px #00000020;
+  -webkit-transition: 550ms;
+  transition: 550ms;
+}
+
+.toggleSwitch:checked {
+  background-color: #ff5017;
+  -webkit-transition: background-color 800ms ease-in-out;
+  transition: background-color 800ms ease-in-out;
+}
+
+.toggleSwitch:checked::before {
+  left: 15px;
+  -webkit-box-shadow: -0.1px 0 5px #000000c0;
+          box-shadow: -0.1px 0 5px #000000c0;
+  background-color: #f5f5f5;
+}
+
+.toggleSwitch::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 5px solid #f5f5f5;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent;
+  border: transparent;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: #f5f5f540;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  height: 2px;
+}
+
+/* label */
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px auto;
+  padding: 7.5px;
+  border: 2px solid #3b73ac;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+  min-width: 375px;
+  background-color: #ffffff09;
+  -webkit-box-shadow: 0 0 1px 0 #fff;
+          box-shadow: 0 0 1px 0 #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+
+#backBtn {
+  width: 45px;
+  height: 45px;
+  border: 2.5px solid transparent;
+  position: absolute;
+  left: 0;
+  margin: 0 20px;
+  margin-bottom: 0;
+  display: block;
+  border-radius: 50%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+#backBtn:hover svg {
+  fill: #ff5917;
+}
+
+#backBtn a {
+  padding: 0;
+}
+
+#backBtn svg {
+  display: block;
+  margin: 5px;
+  width: 30px;
+  fill: white;
+  -webkit-transition: 550ms;
+  transition: 550ms;
+}
+
+.nav-list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav-items {
+  list-style: none;
+  padding: .4em 1em;
+}
+
+.nav-items span {
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+  border: 2.5px solid transparent;
+  color: whitesmoke;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
+}
+
+.nav-items span:hover {
+  border: 2.5px solid #ff5917;
+}
+
+.nav-link {
+  outline-style: none;
+  outline-color: transparent;
+  padding: 7.5px 10px;
+  margin-top: 5px;
+  border-radius: 50px;
+}
+
+.selected-nav-option {
+  background: #ff5917 !important;
+  color: white !important;
+  text-shadow: 3px 3px 3px #333;
+}
+
+.selected-nav-option:hover {
+  border-color: white !important;
+}
+
+.container {
+  height: 80vh;
+  min-height: 450px;
+  min-width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#analog {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#analogComponents {
+  margin: 10px;
+}
+
+#analogClock {
+  width: 75vmin;
+  height: 75vmin;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 450px;
+  max-height: 450px;
+  background-size: 100%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: auto;
+  align-items: center;
+  -webkit-box-shadow: 0 0 0 .4vw #ffffffdd,  inset 0 0 2vw 1vw #3b73ac;
+          box-shadow: 0 0 0 .4vw #ffffffdd,  inset 0 0 2vw 1vw #3b73ac;
+}
+
+#hour, #minute, #second {
+  position: absolute;
+  bottom: 50%;
+  border-radius: 20vw;
+  background-color: #333;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#hour {
+  width: 1.5%;
+  height: 28%;
+  left: 49.16%;
+  background-color: #ffffff4d;
+  z-index: 3;
+}
+
+#minute {
+  width: 0.9%;
+  height: 32%;
+  left: 49.5%;
+  background-color: #ffffff80;
+  z-index: 2;
+}
+
+#second {
+  width: 1px;
+  height: 35%;
+  left: 49.85%;
+  background-color: white;
+  z-index: 1;
+}
+
+#centerOfAnalog {
+  width: 4%;
+  height: 4%;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 4;
+}
+
+@media (max-height: 700px) {
+  #analogClock {
+    width: 65vmin !important;
+    height: 65vmin !important;
+  }
+}
+
+#digital {
+  cursor: default;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+}
+
+.digitalClock {
+  width: 81vmin;
+  min-width: 350px;
+  max-width: 600px;
+  height: 27vmin;
+  min-height: 116.67px;
+  max-height: 200px;
+  border: 3px solid whitesmoke;
+  border-radius: 30px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Signika', sans-serif;
+  position: relative;
+  -webkit-box-shadow: 5.5px -5.5px 0 7.5px #ffffffa0, -5.5px 5.5px 0 7.5px #1a6ea770;
+          box-shadow: 5.5px -5.5px 0 7.5px #ffffffa0, -5.5px 5.5px 0 7.5px #1a6ea770;
+  -webkit-transition: -webkit-box-shadow 450ms ease-in-out;
+  transition: -webkit-box-shadow 450ms ease-in-out;
+  transition: box-shadow 450ms ease-in-out;
+  transition: box-shadow 450ms ease-in-out, -webkit-box-shadow 450ms ease-in-out;
+}
+
+.digitalClock:hover {
+  -webkit-box-shadow: -5.5px 5.5px 0 7.5px #ffffff80, 5.5px -5.5px 0 7.5px #1a6ea770;
+          box-shadow: -5.5px 5.5px 0 7.5px #ffffff80, 5.5px -5.5px 0 7.5px #1a6ea770;
+  -webkit-transition: 650ms ease-in-out;
+  transition: 650ms ease-in-out;
+}
+
+.digitalClock #dtime {
+  font-size: 17.5vmin;
+}
+
+.digitalClock > div {
+  position: absolute;
+  top: 0;
+}
+
+.digitalClock > div > span {
+  display: inline-block;
+  text-align: center;
+  width: 19vmin;
+}
+
+.digitalClock #hdblink, .digitalClock #ampm {
+  width: auto;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.digitalClock #ampm {
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 6.7vmin;
+}
+
+.digitalClock #dday {
+  font-family: 'Balsamiq Sans', cursive;
+  display: inline-block;
+  font-size: 5.5vmin;
+  top: 70%;
+}
+
+.digitalClock #dday span {
+  width: auto !important;
+}
+
+@media (max-width: 436.7px) {
+  .digitalClock > div > span {
+    width: 87.19px !important;
+  }
+  #hdblink, #ampm {
+    width: auto !important;
+  }
+  #dday {
+    font-size: 34.96px !important;
+  }
+  #dday span {
+    width: auto !important;
+  }
+  #dtime {
+    font-size: 62.5px !important;
+  }
+  #ampm {
+    font-size: 30px;
+  }
+}
+
+@media (max-height: 444px) {
+  .digitalClock > div > span {
+    width: 87.19px !important;
+  }
+  #hdblink, #ampm {
+    width: auto !important;
+  }
+  #dday {
+    font-size: 34.96px !important;
+  }
+  #dday span {
+    width: auto !important;
+  }
+  #dtime {
+    font-size: 62.5px !important;
+  }
+  #ampm {
+    font-size: 30px;
+  }
+}
+
+.footer {
+  width: 100%;
+  min-width: 375px;
+  -webkit-user-select: unset;
+     -moz-user-select: unset;
+      -ms-user-select: unset;
+          user-select: unset;
+  text-align: center;
+  color: #f5f5f580;
+  padding: 8px 0;
+  cursor: default;
+  -webkit-box-shadow: 0 -.1px 0 0 #fff;
+          box-shadow: 0 -.1px 0 0 #fff;
+}
+
+.footer span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.footer p {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.footer a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #f5f5f580;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color: whitesmoke;
+}
+
+.footer strong {
+  cursor: default;
+  font-size: 22px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.footer strong:hover {
+  color: #f5f5f5a0;
+}
+/*# sourceMappingURL=style.css.map */

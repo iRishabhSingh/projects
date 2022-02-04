@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+#digital {
+    cursor: default;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+.digitalClock {
+    width: 81vmin;
+    min-width: 350px;
+    max-width: 600px;
+    height: 27vmin;
+    min-height: 116.67px;
+    max-height: 200px;
+    border: 3px solid whitesmoke;
+    border-radius: 30px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Signika', sans-serif;
+    position: relative;
+    box-shadow: 5.5px -5.5px 0 7.5px #ffffffa0, -5.5px 5.5px 0 7.5px #1a6ea770;
+    transition: box-shadow 450ms ease-in-out;
+
+    &:hover {
+        box-shadow: -5.5px 5.5px 0 7.5px #ffffff80, 5.5px -5.5px 0 7.5px #1a6ea770;
+        transition: 650ms ease-in-out;
+    }
+    
+    #dtime {
+        font-size: 17.5vmin;
+    }
+    & > div {
+        position: absolute;
+        top: 0;
+    }
+
+    & > div > span {
+        display: inline-block;
+        text-align: center;
+        width: 19vmin;
+    }
+    #hdblink, #ampm {
+        width: auto;
+        transition: color 200ms ease-in-out;
+    }
+    #ampm {
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 6.7vmin;
+    } 
+    #dday {
+        font-family: 'Balsamiq Sans', cursive;
+        display: inline-block;
+        font-size: 5.5vmin;
+        top: 70%;
+
+        span {
+            width: auto !important;
+        }
+    }
+}
+
+@media (max-width: 436.7px) {
+    .digitalClock > div > span {
+        width: 87.19px !important;
+    }
+    #hdblink, #ampm {
+        width: auto !important;
+    }
+    #dday {
+        font-size: 34.96px !important;
+
+        span {
+            width: auto !important;
+        }
+    }
+    #dtime {
+        font-size: 62.5px !important;
+    }
+    #ampm {
+        font-size: 30px;
+    }
+}
+
+@media (max-height: 444px) {
+    .digitalClock > div > span {
+        width: 87.19px !important;
+    }
+    #hdblink, #ampm {
+        width: auto !important;
+    }
+    #dday {
+        font-size: 34.96px !important;
+
+        span {
+            width: auto !important;
+        }
+    }
+    #dtime {
+        font-size: 62.5px !important;
+    }
+    #ampm {
+        font-size: 30px;
+    }
+}
